@@ -1,0 +1,21 @@
+.cart{
+    color: white;
+    font-size: 40px;
+    z-index: 1;
+    
+}
+
+.number{
+    position:relative;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+    background-color: rgb(168, 3, 3);
+    width: 30px;
+    border-radius: 25px;
+    text-align: center;
+    left: -20px;
+
+}
+
+
