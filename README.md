@@ -1,8 +1,7 @@
-# React + Vite
+# PreEntrega1 - REACT -
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Trabajo pre entrega de react en Coderhouse, la aplicación es un ecomerce donde en esta primera entrega se debe tener el componente cartwidget, y un componente listcontainer con un prop (greeting).
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Se realizó lo pedido para la entrega
+- Se utilizó bootstrap y css para acomodar los estilos
+- Se realizó un menú hamburguesa responsive ( a los 768px de ancho el icono desaparece y se obtiene el menú)
