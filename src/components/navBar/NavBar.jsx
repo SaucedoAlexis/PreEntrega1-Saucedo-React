@@ -1,54 +1,47 @@
 import { CartWidget } from "../CartWidget/CartWidget"
-import styles from "./NavBar.module.css"
+import style from "./NavBar.module.css"
 
 export const NavBar = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg">
-                <div className="container-fluid">
+            <nav className={`${style.nav}`}>
+                <div>
+                    <div className={`${style.listDropDown}`}>
+                        <i className={`bi bi-list ${style.listDropDown__icon}`}></i>
+                        <ul className={`${style.items}`}>
+                            <li className={`${style.item}`}>
 
-                    <button className={`navbar-toggler ${styles.hamburguer} my-2`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className={`navbar-toggler-icon bg-light`}></span>
-                    </button>
-                    <div className={`collapse navbar-collapse ${styles.navContent}`} id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Lectura
-                                </a>
-                                <ul className={`dropdown-menu bg-dark`}>
-                                    <li><a className="dropdown-item" href="#">Manga</a></li>
-                                    <li><a className="dropdown-item" href="#">Manwha</a></li>
-                                    <li><a className="dropdown-item" href="#">Novelas Ligeras</a></li>
-
+                                <a href="" className={`${style.item__name}`}>Ropa <i className={`bi bi-chevron-down ${style.chevronIcon}`}></i></a>
+                                <ul className={`${style.subitems}`}>
+                                    <li><a href="">Buzos</a></li>
+                                    <li><a href="">Remeras</a></li>
+                                    <li><a href="">Pantalones</a></li>
                                 </ul>
                             </li>
-                            <li className="nav-item dropdown ">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Ropa
-                                </a>
-                                <ul className="dropdown-menu bg-dark">
-                                    <li><a className="dropdown-item" href="#">Remeras</a></li>
-                                    <li><a className="dropdown-item" href="#">Buzos</a></li>
-                                    <li><a className="dropdown-item" href="#">Pantalones</a></li>
+
+                            <li className={`${style.item}`}>
+
+                                <a href="" className={`${style.item__name}`}>Accesorios <i className={`bi bi-chevron-down ${style.chevronIcon}`}></i></a>
+                                <ul className={`${style.subitems}`}>
+                                    <li><a href="">Aritos</a></li>
+                                    <li><a href="">Anillos</a></li>
+                                    <li><a href="">Collares</a></li>
                                 </ul>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Accesorios
-                                </a>
-                                <ul className="dropdown-menu bg-dark">
-                                    <li><a className="dropdown-item" href="#">Collares</a></li>
-                                    <li><a className="dropdown-item" href="#">Aritos</a></li>
-                                    <li><a className="dropdown-item" href="#">Anillos</a></li>
+                            <li className={`${style.item}`}>
+
+                                <a href="" className={`${style.item__name}`}>Lectura <i className={`bi bi-chevron-down ${style.chevronIcon}`}></i></a>
+                                <ul className={`${style.subitems}`}>
+                                    <li><a href="">Manga</a></li>
+                                    <li><a href="">Manwha</a></li>
+                                    <li><a href="">Novelas Ligeras</a></li>
                                 </ul>
                             </li>
 
                         </ul>
-
                     </div>
-                    < CartWidget />
                 </div>
+                < CartWidget />
 
             </nav>
 

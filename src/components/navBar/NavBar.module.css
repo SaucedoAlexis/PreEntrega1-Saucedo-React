@@ -1,9 +1,82 @@
-.navContent ul li a, ul li{
-    color:white;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-.hamburguer{
-    background-color: white;
+
+.listDropDown .items {
+  display: none;
+
+}
+
+.listDropDown__icon {
+  color: white;
+  font-size: 2rem;
+
+}
+
+.listDropDown:hover .items {
+  display: flex;
+  position: absolute;
 }
 
 
+.item {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 1rem;
+
+
+}
+
+.item__name:hover {
+  &>i {
+    background-color: gray;
+  }
+
+  background-color: gray;
+}
+
+.item {
+  & .subitems {
+    display: none;
+  }
+
+  &:hover .subitems {
+    display: flex;
+    position: absolute;
+
+    gap: 1rem;
+
+    & a:hover {
+      background-color: gray;
+    }
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width:768px) {
+  .listDropDown__icon {
+    display: none;
+  }
+
+  .listDropDown .items {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 36px;
+        
+  }
+
+  
+
+  
+
+}

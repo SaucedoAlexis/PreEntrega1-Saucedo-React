@@ -1,4 +1,16 @@
 *{
-  background-color: rgb(25, 71, 124);
+  background-color: rgb(23, 24, 26);
   
+}
+
+li,ul{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
