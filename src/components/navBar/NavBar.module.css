@@ -1,19 +1,5 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-
 .listDropDown .items {
   display: none;
-
-}
-
-.listDropDown__icon {
-  color: white;
-  font-size: 2rem;
 
 }
 
@@ -34,6 +20,7 @@
 .item__name:hover {
   &>i {
     background-color: gray;
+    
   }
 
   background-color: gray;
@@ -42,12 +29,14 @@
 .item {
   & .subitems {
     display: none;
+    
   }
+  
 
   &:hover .subitems {
     display: flex;
     position: absolute;
-
+    
     gap: 1rem;
 
     & a:hover {

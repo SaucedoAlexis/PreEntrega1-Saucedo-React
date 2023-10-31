@@ -1,13 +1,14 @@
 import { CartWidget } from "../CartWidget/CartWidget"
 import style from "./NavBar.module.css"
-
+import { BsList } from 'react-icons/bs';
 export const NavBar = () => {
     return (
         <>
-            <nav className={`${style.nav}`}>
+            <nav className={`flex justify-between items-center p-4`}>
                 <div>
                     <div className={`${style.listDropDown}`}>
-                        <i className={`bi bi-list ${style.listDropDown__icon}`}></i>
+                        <BsList className="text-white text-3xl" />
+
                         <ul className={`${style.items}`}>
                             <li className={`${style.item}`}>
 
@@ -19,7 +20,7 @@ export const NavBar = () => {
                                 </ul>
                             </li>
 
-                            <li className={`${style.item}`}>
+                            {/* <li className={`${style.item}`}>
 
                                 <a href="" className={`${style.item__name}`}>Accesorios <i className={`bi bi-chevron-down ${style.chevronIcon}`}></i></a>
                                 <ul className={`${style.subitems}`}>
@@ -36,7 +37,7 @@ export const NavBar = () => {
                                     <li><a href="">Manwha</a></li>
                                     <li><a href="">Novelas Ligeras</a></li>
                                 </ul>
-                            </li>
+                            </li> */}
 
                         </ul>
                     </div>
