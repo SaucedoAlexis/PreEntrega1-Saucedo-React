@@ -1,18 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { NavBar } from './components/navBar/NavBar'
-import { ItemListContainer } from './components/itemListContainer/itemListContainer'
+import { ItemListContainer } from './components/itemListContainer/ItemListContainer'
+
+
 
 
 function App() {
-  
+
 
   return (
     <>
-      <NavBar />
-      <ItemListContainer greeting="Bienvenido!!"/>
+      
+      
+        <NavBar />
+
+
+
+        <ItemListContainer greeting="Bienvenido!!" />
+      
 
     </>
   )
