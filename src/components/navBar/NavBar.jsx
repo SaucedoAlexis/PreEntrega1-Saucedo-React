@@ -29,7 +29,7 @@ export const NavBar = () => {
                             <MdCancel className={ `${styles.cancel} text-2xl block` } onClick={showItems} />
                         </button>
                     </li>
-                    <li className="">
+                    <li className="pl-1 md:pl-0">
                         <a href="#" className="font-bold">Home</a>
                     </li>
 
@@ -51,7 +51,7 @@ export const NavBar = () => {
                         <NavBarSubItems subItemName="Pulseras" href="#" />
                     </NavBarItem>
 
-                    <li className="">
+                    <li className="pl-1 md:pl-0">
                         <a href="#" className="font-bold whitespace-nowrap">Contact Us</a>
                     </li>
                 </ul>
