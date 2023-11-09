@@ -11,7 +11,7 @@ export const useCount = (initial = 0,max) => {
 
   const decrement = () => {
 
-    count > 1 && setCount(count  - 1)
+    count > 0 && setCount(count  - 1)
   }
 
   return {count, increment, decrement}

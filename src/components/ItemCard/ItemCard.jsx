@@ -11,8 +11,9 @@ export const ItemCard = ({name, price, category, subCategory, urlImg, stock}) =>
         <h2>{name}</h2>
         <h3>{category}</h3>
         <h3>{subCategory}</h3>
-        <h3>Precio: {price}</h3>
+        <h3>Precio: {price} $</h3>
         <Button initial={count} incrementFunction={increment} decrementFunction={decrement}></Button>
+        
     </div>
   )
 }

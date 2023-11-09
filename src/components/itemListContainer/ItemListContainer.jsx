@@ -1,7 +1,7 @@
 
 import { ItemCard } from '../ItemCard/ItemCard'
 import styles from './ItemListContainer.module.css'
-import { getProducts } from '../../ItemsMock'
+import { getProductById, getProducts, getProductsByCategory, getProductsBySubCategory } from '../../ItemsMock'
 import { useEffect } from 'react'
 import { useState } from 'react'
 
