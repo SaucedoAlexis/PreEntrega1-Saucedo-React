@@ -1,0 +1,10 @@
+.hover:hover, .hover:hover *{
+    background-color: rgb(150, 144, 144);
+    
+}
+
+.hover a{
+    display: block;
+    width: 100%;
+    padding: 0 0.5rem;
+}
