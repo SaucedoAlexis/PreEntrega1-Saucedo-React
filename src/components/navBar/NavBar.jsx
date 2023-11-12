@@ -5,6 +5,8 @@ import { NavBarSubItems } from "../NavBarSubItems/NavBarSubItems";
 import styles from "./NavBar.module.css"
 import { BsList } from 'react-icons/bs';
 import { MdCancel } from 'react-icons/md';
+import { Link } from "react-router-dom";
+
 
 export const NavBar = () => {
     const [displayItem, setdisplayItem] = useState(`${styles.animacionCerrar}`)
@@ -26,11 +28,16 @@ export const NavBar = () => {
                 <ul className={` ${styles.navItems} ${displayItem} `}>
                     <li>
                         <button>
-                            <MdCancel className={ `${styles.cancel} text-2xl block` } onClick={showItems} />
+                            <MdCancel className={`${styles.cancel} text-2xl block`} onClick={showItems} />
                         </button>
                     </li>
+                    <Link to={"/"}>
+                        <img src="/logo.png" alt="" className="w-8 bg-white border-4 border-white mx-auto" />
+                    </Link>
                     <li className="pl-1 md:pl-0">
-                        <a href="#" className="font-bold">Home</a>
+                        <Link to={"/"} className="font-bold">
+                            Home
+                        </Link>
                     </li>
 
                     <NavBarItem itemName="Ropa">

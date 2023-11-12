@@ -3,7 +3,7 @@ const items = [
     id: 1,
     name: "Tate no yuusha",
     category: "Lectura",
-    subCategory: "Manga",
+    subCategory: "Mangas",
     price: 3500,
     urlImg:
       "https://m.media-amazon.com/images/M/MV5BMTQ2NTA1N2MtMzkxOS00MjQ3LTliODctOTk0ZTk1N2FiMmNlXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
@@ -14,7 +14,7 @@ const items = [
     id: 2,
     name: "Goblin Slayer",
     category: "Lectura",
-    subCategory: "Manga",
+    subCategory: "Mangas",
     price: 3500,
     urlImg:
       "https://inmanga.com/thumbnails/manga/Goblin-Slayer/d9c03100-c6ba-43ff-a67b-8c8a056442c7",
@@ -25,7 +25,7 @@ const items = [
     id: 3,
     name: "Solo Leveling",
     category: "Lectura",
-    subCategory: "Manhwa",
+    subCategory: "Manhwas",
     price: 4500,
     urlImg:
       "https://upload.wikimedia.org/wikipedia/en/9/99/Solo_Leveling_Webtoon.png",
@@ -36,7 +36,7 @@ const items = [
     id: 4,
     name: "Tower of god",
     category: "Lectura",
-    subCategory: "Manhwa",
+    subCategory: "Manwhas",
     price: 3500,
     urlImg:
       "https://upload.wikimedia.org/wikipedia/en/7/7d/Tower_of_God_Volume_1_Cover.jpg",
@@ -47,7 +47,7 @@ const items = [
     id: 5,
     name: "Tenki no Ko",
     category: "Lectura",
-    subCategory: "Novela Ligera",
+    subCategory: "Novelas ligeras",
     price: 7000,
     urlImg:
       "https://nextnovels.com/wp-content/uploads/2021/12/tenki-no-ko-01-1-722x1024.jpg",
@@ -57,7 +57,7 @@ const items = [
   {
     id: 6,
     name: "Pendientes Tanjiro",
-    category: "Accesorio",
+    category: "Accesorios",
     subCategory: "Aritos",
     price: 7000,
     urlImg:
@@ -68,7 +68,7 @@ const items = [
   {
     id: 7,
     name: "Anillo Akatsuki",
-    category: "Accesorio",
+    category: "Accesorios",
     subCategory: "Anillos",
     price: 7000,
     urlImg:
@@ -79,7 +79,7 @@ const items = [
   {
     id: 8,
     name: "Pulsera Goku",
-    category: "Accesorio",
+    category: "Accesorios",
     subCategory: "Pulseras",
     price: 4500,
     urlImg:
@@ -131,23 +131,8 @@ export const getProducts = () => {
 
 export const getProductById = (id) => {
   return new Promise((resolve, reject) => {
-    resolve(items.filter((item) => item.id == id));
+    resolve(items.find((item) => item.id == id));
     reject([]);
   });
 };
 
-export const getProductsByCategory = (category) => {
-  return new Promise((resolve, reject) => {
-    resolve(items.filter((item) => 
-    item.category == category));
-    reject([]);
-  });
-};
-
-export const getProductsBySubCategory = (subCategory) => {
-  return new Promise((resolve, reject) => {
-    resolve(items.filter((item) => 
-    item.subCategory == subCategory));
-    reject([]);
-  });
-};

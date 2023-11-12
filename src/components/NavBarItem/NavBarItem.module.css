@@ -2,12 +2,9 @@
     font-weight: bold;
     padding: 0.5rem;
     border-bottom: 2px white solid;
-    & div{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    
 }
+
 
 
 .item ul li:first-child{
