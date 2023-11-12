@@ -1,13 +1,12 @@
 
 import { Item } from '../Item/Item'
 import styles from './ItemListContainer.module.css'
-import { getProducts} from '../../ItemsMock'
-import { useEffect } from 'react'
-import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import {useProducts} from "../../hooks/useProducts"
+import { LoadingContainer } from '../LoadingContainer/LoadingContainer'
 
-export const ItemListContainer = ({products}) => {
+export const ItemListContainer = () => {
     
+    const {whatProducts,categoryId,subCategoryId,isLoading} = useProducts()
    
     
 
@@ -15,9 +14,8 @@ export const ItemListContainer = ({products}) => {
         <div className={`inline-block h-screen w-full pt-4`}>
             <div className='flex flex-wrap items-center justify-center gap-2'>
                 
-                {products.map((product) => <Item key={product.id} {...product} /> )}
+                {isLoading ? <LoadingContainer/> : whatProducts(categoryId,subCategoryId).map((product) => <Item key={product.id} {...product} /> )}
             </div>
         </div>
     )
 }
-// flex justify-content-center align-items-center
