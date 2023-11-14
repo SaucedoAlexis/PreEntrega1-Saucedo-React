@@ -1,6 +1,6 @@
-
 import { Link } from "react-router-dom"
 import styles from "./NavBarSubItems.module.css"
+
 export const NavBarSubItems = ({subItemName}) => {
 
     return (

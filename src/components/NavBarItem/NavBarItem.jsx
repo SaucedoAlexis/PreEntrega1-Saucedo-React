@@ -1,9 +1,8 @@
-
-
 import { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import styles from "./NavBarItem.module.css"
 import { Link } from 'react-router-dom';
+
 export const NavBarItem = ({ children, itemName }) => {
     
     const [active, setActive] = useState(false);

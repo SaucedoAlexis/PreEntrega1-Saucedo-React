@@ -1,10 +1,8 @@
-import { useCount } from "../../hooks"
-
 import styles from "./Item.module.css"
 import { Link } from "react-router-dom"
 
 export const Item = ({ id, name, price, category, subCategory, urlImg, stock }) => {
-  const { count, increment, decrement } = useCount(0, stock)
+  
 
   return (
     <div className={`text-white ${styles.card}`}>
