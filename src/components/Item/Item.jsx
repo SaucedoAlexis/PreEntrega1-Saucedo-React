@@ -1,7 +1,7 @@
 import styles from "./Item.module.css"
 import { Link } from "react-router-dom"
 
-export const Item = ({ id, name, price, category, subCategory, urlImg, stock }) => {
+export const Item = ({ id, name, price, category, subCategory, urlImg}) => {
   
 
   return (
