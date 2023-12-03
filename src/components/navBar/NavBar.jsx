@@ -7,7 +7,6 @@ import { BsList } from 'react-icons/bs';
 import { MdCancel } from 'react-icons/md';
 import { Link } from "react-router-dom";
 
-
 export const NavBar = () => {
     const [displayItem, setdisplayItem] = useState(`${styles.animacionCerrar}`)
     const showItems = () => {
@@ -23,7 +22,6 @@ export const NavBar = () => {
                 <button className={`${styles.hamburguer}`}>
                     <BsList className=" text-white text-3xl" onClick={showItems} />
                 </button>
-
 
                 <ul className={` ${styles.navItems} ${displayItem} `}>
                     <li>
@@ -41,21 +39,21 @@ export const NavBar = () => {
                     </li>
 
                     <NavBarItem itemName="Ropa">
-                        <NavBarSubItems subItemName="Remeras" href="#" />
-                        <NavBarSubItems subItemName="Buzos" href="#" />
-                        <NavBarSubItems subItemName="Pantalones" href="#" />
+                        <NavBarSubItems subItemName="Remeras" />
+                        <NavBarSubItems subItemName="Buzos" />
+                        <NavBarSubItems subItemName="Pantalones" />
                     </NavBarItem>
 
                     <NavBarItem itemName="Lectura">
-                        <NavBarSubItems subItemName="Mangas" href="#" />
-                        <NavBarSubItems subItemName="Manwhas" href="#" />
-                        <NavBarSubItems subItemName="Novelas ligeras" href="#" />
+                        <NavBarSubItems subItemName="Mangas" />
+                        <NavBarSubItems subItemName="Manwhas" />
+                        <NavBarSubItems subItemName="Novelas ligeras" />
                     </NavBarItem>
 
                     <NavBarItem itemName="Accesorios">
-                        <NavBarSubItems subItemName="Anillos" href="#" />
-                        <NavBarSubItems subItemName="Aritos" href="#" />
-                        <NavBarSubItems subItemName="Pulseras" href="#" />
+                        <NavBarSubItems subItemName="Anillos" />
+                        <NavBarSubItems subItemName="Aritos" />
+                        <NavBarSubItems subItemName="Pulseras" />
                     </NavBarItem>
 
                     <li className="pl-1 md:pl-0">
@@ -63,9 +61,9 @@ export const NavBar = () => {
                     </li>
                 </ul>
 
-
-                < CartWidget />
-
+                <Link to={"/cart"}>
+                    < CartWidget />
+                </Link>
             </nav>
 
         </>
