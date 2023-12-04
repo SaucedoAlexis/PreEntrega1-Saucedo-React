@@ -2,6 +2,7 @@ import { Item } from "../Item/Item"
 
 
 export const ItemList = ({products}) => {
+  
   return (
     <div className='flex flex-wrap items-center justify-center gap-2'>
        
