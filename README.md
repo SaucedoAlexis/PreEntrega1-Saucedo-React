@@ -13,7 +13,7 @@ Este proyecto consiste en un Ecommerce donde se puede presionar en la categoría
 - Al presionar en el carrito se viajará a : "/Cart" donde podrá ver todos los itemas agregados al carrito, el total de la compra y un formulario para hacer el pedido.
 - El formulario del pedido funcionará una vez llenado todos los campos y que el mail y su verificación sean el mismo. Luego de eso se habilitará la compra
 - Al clickear en la compra, el botón desaparecerá y luego de un tiempo aparecerá una leyenda con el número de orden.
-
+- El formulario solo será visible si hay productos en el cart
 # Librerías y otras herramientas utilizadas no obligatorias
 
 - Tailwindcss

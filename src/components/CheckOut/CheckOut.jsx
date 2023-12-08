@@ -1,7 +1,7 @@
 import { addDoc, collection, getDoc, getDocs, query, where } from 'firebase/firestore';
 import { useEffect, useState } from 'react'
-import { ashitaProducts } from '../config/ashitaConfig';
-import { LoadingContainer } from '../components/LoadingContainer/LoadingContainer';
+import { ashitaProducts } from '../../config/ashitaConfig';
+import { LoadingContainer } from '../LoadingContainer/LoadingContainer';
 
 export const CheckOut = ({cartItems,total}) => {
 
@@ -86,8 +86,9 @@ export const CheckOut = ({cartItems,total}) => {
                     <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} className='text-white border border-white p-1' />
                     <input type="text" placeholder='Verifique Email' value={verifiqueEmail} onChange={(e) => setVerifiqueEmail(e.target.value)} className='text-white border border-white p-1' />
                     {email != "" && verifiqueEmail != "" && emailVer ? "" : <p className='text-white'>Los email no coinciden</p>}
-
-                    {!isClicked && (areWords && emailVer ? <button className='text-white rounded border border-white p-2' onClick={handleConfirmBuying}>Comprar</button> : <p className='text-white'>Hay campos sin llenar</p>)}
+                    {areWords ? "" : <p className='text-white'>Hay campos sin llenar</p>}
+                    {!isClicked && ((areWords && emailVer) && <button className='text-white rounded border border-white p-2' onClick={handleConfirmBuying}>Comprar</button>)}
+                       
                     {buttonPress ? handleBuyButton() : ""}
                 </div>
             </div>
