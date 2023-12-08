@@ -56,9 +56,7 @@ export const NavBar = () => {
                         <NavBarSubItems subItemName="Pulseras" />
                     </NavBarItem>
 
-                    <li className="pl-1 md:pl-0">
-                        <a href="#" className="font-bold whitespace-nowrap">Contact Us</a>
-                    </li>
+
                 </ul>
 
                 <Link to={"/cart"}>

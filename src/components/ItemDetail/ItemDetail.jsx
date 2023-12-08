@@ -4,17 +4,19 @@ import { ItemCount } from "../ItemCount/ItemCount"
 import styles from "./ItemDetail.module.css"
 
 import { AddProductButton } from "../AddProductButton/AddProductButton"
+import { ItemDescription } from "../ItemDescription/ItemDescription"
 
 export const ItemDetail = ({ urlImg, description, price, name, stock, id }) => {
-    
+
     const product = {
         urlImg: urlImg,
         name: name,
         price: price,
-        id: id
+        id: id,
+        description: description
 
     }
-    
+
 
     const [count, setCount] = useState(0)
 
@@ -23,22 +25,18 @@ export const ItemDetail = ({ urlImg, description, price, name, stock, id }) => {
     }
 
     return (
-        <div className={`${styles.details}`}>
-            
-            <img src={urlImg} alt={`imagen de ${name}`} className={`${styles.image}`} />
-            <div className={`${styles.info}`}>
-                <h2>{name}</h2>
-                <h3>Precio: {price}$</h3>
-                <p>{description}</p>
+        <div className={`${styles.details} flex flex-col`}>
+            <ItemDescription {...product} />
 
+            <div className="w-10/12">
                 <ItemCount stock={stock} countFunction={handleCount} ></ItemCount>
                 {
                     count > 0 ? <AddProductButton {...product} count={count} ></AddProductButton> :
-                    <button className="rounded border border-white  text-white mt-3">Agregar al carrito</button>
+                        <button type="button" disabled className={' cursor-not-allowed rounded border border-white  text-white mt-3 p-3'}>Agregar al carrito</button>
                 }
-
-
             </div>
+
         </div>
+
     )
 }

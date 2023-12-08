@@ -25,11 +25,12 @@ export const ItemListContainer = () => {
 
             categoryId ? marketProducts = query(collection(ashitaProducts, "products"), where("category", "==", categoryId))
                 : marketProducts = query(collection(ashitaProducts, "products"), where("subCategory", "==", subCategoryId))
-
+            !isLoading && setIsLoading(true)
 
         }//y si no se cargan todos los productos de la base de datos
         else {
             marketProducts = query(collection(ashitaProducts, "products"));
+            !isLoading && setIsLoading(true)
 
         }//transformamos lo obtenido de la promesa en datos legibles y los pasamos a un arreglo
         getDocs(marketProducts)
@@ -40,7 +41,7 @@ export const ItemListContainer = () => {
             })
             .catch(err => {
                 console.log(err);
-                setIsLoading(false);
+                
             })
 
     }, [categoryId, subCategoryId])

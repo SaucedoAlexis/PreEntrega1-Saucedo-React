@@ -19,6 +19,6 @@ export const AddProductButton = ({id,name,count,price,urlImg}) => {
 
 
   return (
-    <button className="rounded bg-white text-black mt-3" onClick={handleProductAddition}>Agregar al carrito</button>
+    <button className="rounded bg-white text-black mt-3 p-3" onClick={handleProductAddition}>Agregar al carrito</button>
   )
 }

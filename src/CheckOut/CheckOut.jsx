@@ -14,6 +14,7 @@ export const CheckOut = ({cartItems,total}) => {
     const [emailVer, setEmailVer] = useState(false);
     const [orderNum, setOrderNum] = useState("")
     const [buttonPress, setButtonPress] = useState(false)
+    const [isClicked, setIsClicked] = useState(false)
 
 
     useEffect(() => {
@@ -37,6 +38,7 @@ export const CheckOut = ({cartItems,total}) => {
     }, [nombre, apellido, telefono, email, verifiqueEmail])
     const handleConfirmBuying = () => {
         // Obtener la fecha actual y formatearla
+        setIsClicked(true)
         const today = new Date();
         const todayFormated = `${today.toLocaleDateString()}, ${today.toLocaleTimeString()}`
 
@@ -85,7 +87,7 @@ export const CheckOut = ({cartItems,total}) => {
                     <input type="text" placeholder='Verifique Email' value={verifiqueEmail} onChange={(e) => setVerifiqueEmail(e.target.value)} className='text-white border border-white p-1' />
                     {email != "" && verifiqueEmail != "" && emailVer ? "" : <p className='text-white'>Los email no coinciden</p>}
 
-                    {areWords && emailVer ? <button className='text-white rounded border border-white p-2' onClick={handleConfirmBuying}>Comprar</button> : <p className='text-white'>Hay campos sin llenar</p>}
+                    {!isClicked && (areWords && emailVer ? <button className='text-white rounded border border-white p-2' onClick={handleConfirmBuying}>Comprar</button> : <p className='text-white'>Hay campos sin llenar</p>)}
                     {buttonPress ? handleBuyButton() : ""}
                 </div>
             </div>
